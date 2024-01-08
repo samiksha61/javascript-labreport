@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <label for="fac">Enter Number</label>
+  <input type="text" id="fac">
+  <br>
+  <br>
+
+  <button onclick="fact()">Calculate</button>
+  <br>
+  <h3>Results:</h3>
+  <div id="res"></div>
+  <script>
+function fact() {
+            var num = parseInt(document.getElementById('fac').value);
+            var result;
+
+            if (num<0) {
+                result = "Please enter a valid number.";
+            } else {
+                result = factorial(num);
+            }
+
+            document.getElementById('res').innerHTML = result;
+        }
+
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+</script>
+</body>
+</html>
