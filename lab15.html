@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Content Filtering</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  #filters {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>Dynamic Content Filtering</h1>
+
+<div id="filters">
+  <label for="category">Category:</label>
+  <select id="category">
+    <option value="all">All</option>
+    <option value="electronics">Electronics</option>
+    <option value="clothing">Clothing</option>
+    <option value="books">Books</option>
+  </select>
+</div>
+
+<ul id="itemList">
+  <li data-category="electronics">Smartphone - $500</li>
+  <li data-category="clothing">T-Shirt - $20</li>
+  <li data-category="books">Novel - $15</li>
+  <li data-category="electronics">Laptop - $1000</li>
+  <li data-category="clothing">Jeans - $50</li>
+  <li data-category="books">Textbook - $80</li>
+</ul>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const categoryFilter = document.getElementById('category');
+  const itemList = document.getElementById('itemList').getElementsByTagName('li');
+
+  categoryFilter.addEventListener('change', function() {
+    const selectedCategory = this.value;
+
+    for (let item of itemList) {
+      const itemCategory = item.getAttribute('data-category');
+      if (selectedCategory === 'all' || selectedCategory === itemCategory) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+    
