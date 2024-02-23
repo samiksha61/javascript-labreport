@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin for better styling */
+    padding: 20px;
+    background-color: #f0f0f0; /* Optional background color */
+  }
+  
+  .container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Form background color */
+  }
+  
+  .field {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  select {
+    /* Adjust style for select elements */
+    padding: 5px;
+  }
+  
+  input[type="checkbox"] {
+    width: 20px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #449d44;
+  }
+  
+  /* Error Styles */
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* Specific Field Styles */
+  #email,
+  #password,
+  #confirmPassword {
+    margin-bottom: 15px;
+  }
+  
+  #terms {
+    margin-top: 10px;
+  }
+  
+  #country {
+    margin-bottom: 15px;
+  }
+  
+  /* Optional Styles */
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  label[for="url"] {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #url {
+    margin-bottom: 15px;
+  }
+  
+  #file {
+    margin-bottom: 15px;
+  }
+  
+  #date {
+    margin-bottom: 15px;
+  }
+  

@@ -1,0 +1,41 @@
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid gray;
+  }
+  h1 {
+    text-align: center;
+  }
+  input[type="text"] {
+    width: calc(80%);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+  }
+  li.completed span {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  .task-name {
+    flex: 1;
+    margin-left: 10px;
+  }
